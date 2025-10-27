@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ccjxcng6u432d"]
+
+[node name="Dialogue" type="PanelContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 46.0
+offset_right = 510.0
+offset_bottom = 278.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 1
+text = "lorem ipsum dolor sit amet"
+horizontal_alignment = 1
+autowrap_mode = 2

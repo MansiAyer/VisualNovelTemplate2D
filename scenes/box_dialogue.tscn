@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cwqpcg2mnnlf4"]
+
+[node name="BoxDialogue" type="PanelContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 46.0
+offset_right = 510.0
+offset_bottom = 278.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Image" type="Sprite2D" parent="."]
+
+[node name="Speaker" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "speaker:"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 0
+text = "lorem ipsum dolor sit amet"
+autowrap_mode = 2

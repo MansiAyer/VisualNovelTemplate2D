@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl7hxiwf4sleq"]
+
+[ext_resource type="Script" uid="uid://mhfw03siv61q" path="res://scripts/main_control.gd" id="1_3tiwv"]
+[ext_resource type="Script" uid="uid://b0fj46usiwe7y" path="res://scripts/main_menu.gd" id="3_sqeji"]
+[ext_resource type="PackedScene" uid="uid://d1ie2mcfeys2m" path="res://scenes/base_menu.tscn" id="4_422ur"]
+[ext_resource type="Script" uid="uid://efoqpct3gfap" path="res://scripts/story_act.gd" id="6_4v3x4"]
+
+[node name="MainControl" type="Node2D"]
+script = ExtResource("1_3tiwv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MainMenu" parent="." instance=ExtResource("4_422ur")]
+script = ExtResource("3_sqeji")
+
+[node name="New Game" type="Button" parent="MainMenu"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Load" type="Button" parent="MainMenu"]
+visible = false
+layout_mode = 2
+text = "Load"
+
+[node name="History" type="Button" parent="MainMenu"]
+layout_mode = 2
+text = "History"
+
+[node name="StoryAct" type="Node2D" parent="."]
+script = ExtResource("6_4v3x4")
+
+[connection signal="menu_pressed" from="MainMenu" to="." method="handle_menu_actions"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1stc4ueb6el6"]
+
+[ext_resource type="Script" uid="uid://dy6d8pnsddd74" path="res://scripts/screen_dialogue.gd" id="1_dxdjg"]
+
+[node name="ScreenDialogue" type="PanelContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 46.0
+offset_right = 510.0
+offset_bottom = 278.0
+grow_horizontal = 2
+script = ExtResource("1_dxdjg")
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(1020, 0)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 1
+text = "lorem ipsum dolor sit amet"
+horizontal_alignment = 1
+autowrap_mode = 2
