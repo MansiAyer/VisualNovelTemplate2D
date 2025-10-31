@@ -11,7 +11,6 @@ func _ready() -> void:
 	# write check if history exists, make a "history" menu
 	setup_characters()
 	create_acts()
-	print(all_acts)
 	display_main_menu()
 	print("hello world") # checkpoint
 
