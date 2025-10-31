@@ -1,11 +1,12 @@
 extends ScrollContainer
 
-
+signal close_history
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var backbutton = Button.new()
 	backbutton.text = "Back"
+	backbutton.pressed.connect(handle_back_pressed)
 	add_child(backbutton)
 
 func set_history(dialogue_history: Array[String]):
@@ -18,3 +19,7 @@ func set_history(dialogue_history: Array[String]):
 			temp_label.text = dg_item
 			newvbox.add_child(temp_label)
 		add_child(newvbox)
+
+func handle_back_pressed():
+	hide()
+	close_history.emit() # in main this signal connects to display_main_menu()

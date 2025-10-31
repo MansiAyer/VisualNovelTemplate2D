@@ -56,3 +56,4 @@ layout_mode = 2
 alignment = 1
 
 [connection signal="menu_pressed" from="MainMenu" to="." method="handle_menu_actions"]
+[connection signal="close_history" from="History" to="." method="display_main_menu"]

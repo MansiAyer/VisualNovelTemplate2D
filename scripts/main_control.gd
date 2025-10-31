@@ -3,7 +3,7 @@ extends Node2D
 var screen_size : Vector2i
 var all_characters : Array[Character]
 var all_acts : Array[StoryAct]
-var current_history : Array[String]
+var current_history : Array[String] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +35,7 @@ func handle_menu_actions(button_pressed: String):
 			print("menu button pressed: "+ button_pressed)
 
 func handle_story_act_ends(ended_act: StoryAct):
+	current_history.append_array(ended_act.get_act_history())
 	if ended_act.get_act_outcome().is_empty():
 		display_main_menu()
 		get_node("History").set_history(current_history)
