@@ -11,37 +11,37 @@ starting toolset for making a custom visual novel in Godot
 <a name="usecases" />
 
 ## Use Cases
-Making a game for a __Game Jam__
-Building __custom visual novel__ with minimal external code
-Creating __short segments__ or visual novel elements for larger games
+Making a game for a __Game Jam__  
+Building __custom visual novel__ with minimal external code  
+Creating __short segments__ or visual novel elements for larger games  
 
 <hr>
 <a name="classes" />
 
 ## Classes
 __BaseMenu__ 
-Creates a menu with centered buttons
-_Node_:  VBoxContainer
-_Signals_:  Buttons emit the `menu_pressed` signal and pass their button name as `String` when clicked
-
+Creates a menu with centered buttons  
+_Node_:  VBoxContainer  
+_Signals_:  Buttons emit the `menu_pressed` signal and pass their button name as `String` when clicked  
+  
 __Character__
-Holds a set of images or expressions for a character
-_Node_: Node2D
-_Signals_: none
-
-__StoryAct__
-Holds and plays dialogues in the order specified, with a decision (optional) as the end
-_Node_: Node2D
-_Signals_: emits the `act_end` signal when all act events (dialogues & decision) are completed
+Holds a set of images or expressions for a character    
+_Node_: Node2D    
+_Signals_: none  
+  
+__StoryAct__  
+Holds and plays dialogues in the order specified, with a decision (optional) as the end  
+_Node_: Node2D  
+_Signals_: emits the `act_end` signal when all act events (dialogues & decision) are completed  
 
 __Dialogue__
-Creates a dialogue with _only text_ 
-_Node_: PanelContainer
-_Signals_: emits the `dialogue_end` signal when clicked
-
-__BoxDialogue__
-Creates a dialogue with an _image next to text_ 
-_Node_: PanelContainer
+Creates a dialogue with _only text_   
+_Node_: PanelContainer   
+_Signals_: emits the `dialogue_end` signal when clicked  
+  
+__BoxDialogue__   
+Creates a dialogue with an _image next to text_   
+_Node_: PanelContainer   
 _Signals_: emits the `dialogue_end` signal when clicked
 
 __Decision__
