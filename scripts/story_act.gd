@@ -81,6 +81,7 @@ func play_act():
 			act_dialogues[x].show()
 		else:
 			act_dialogues[x].hide()
+	show()
 
 
 func handle_dialogue_end(dg_index: int):
@@ -108,5 +109,5 @@ func get_act_outcome() -> Array[String]:
 	else:
 		return []
 
-func get_act_history():
+func get_act_history() -> Array[String]:
 	return act_history
