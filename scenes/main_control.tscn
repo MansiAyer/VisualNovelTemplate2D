@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl7hxiwf4sleq"]
+[gd_scene load_steps=7 format=3 uid="uid://cl7hxiwf4sleq"]
 
 [ext_resource type="Script" uid="uid://mhfw03siv61q" path="res://scripts/main_control.gd" id="1_3tiwv"]
 [ext_resource type="Script" uid="uid://b0fj46usiwe7y" path="res://scripts/main_menu.gd" id="3_sqeji"]
 [ext_resource type="Texture2D" uid="uid://be06fa30gmef3" path="res://media/placeholders/aesthetics-vaporwave-seapunk-light-wallpaper-preview-1827258361.jpg" id="4_8jdwr"]
 [ext_resource type="PackedScene" uid="uid://d1ie2mcfeys2m" path="res://scenes/base_menu.tscn" id="4_422ur"]
 [ext_resource type="Script" uid="uid://efoqpct3gfap" path="res://scripts/story_act.gd" id="6_4v3x4"]
+[ext_resource type="Script" uid="uid://d03ea73m2vyhf" path="res://scripts/history.gd" id="6_sqeji"]
 
 [node name="MainControl" type="Node2D"]
 script = ExtResource("1_3tiwv")
@@ -34,5 +35,24 @@ text = "History"
 
 [node name="StoryAct" type="Node2D" parent="."]
 script = ExtResource("6_4v3x4")
+
+[node name="History" type="ScrollContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+script = ExtResource("6_sqeji")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="History"]
+layout_mode = 2
+alignment = 1
 
 [connection signal="menu_pressed" from="MainMenu" to="." method="handle_menu_actions"]
