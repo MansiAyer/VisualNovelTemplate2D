@@ -8,6 +8,7 @@ extends Node2D
 @export var act_dialogues : Array[Dialogue]
 @export var act_history : Array[String]
 signal act_end
+@export var act_background : Sprite2D = Sprite2D.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +17,11 @@ func _ready() -> void:
 func setup_constants():
 	#position = Vector2(-510, 46)
 	position = Vector2.ZERO
+
+func set_act_background(bg_image_path: String):
+	act_background.set_texture(load(bg_image_path) as Texture2D)
+	add_child(act_background)
+	act_background.set_position(Vector2.ZERO)
 
 func set_act_characters(ch_array : Array[Character]):
 	for ch_x in ch_array:

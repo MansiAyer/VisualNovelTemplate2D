@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl7hxiwf4sleq"]
+[gd_scene load_steps=6 format=3 uid="uid://cl7hxiwf4sleq"]
 
 [ext_resource type="Script" uid="uid://mhfw03siv61q" path="res://scripts/main_control.gd" id="1_3tiwv"]
 [ext_resource type="Script" uid="uid://b0fj46usiwe7y" path="res://scripts/main_menu.gd" id="3_sqeji"]
+[ext_resource type="Texture2D" uid="uid://be06fa30gmef3" path="res://media/placeholders/aesthetics-vaporwave-seapunk-light-wallpaper-preview-1827258361.jpg" id="4_8jdwr"]
 [ext_resource type="PackedScene" uid="uid://d1ie2mcfeys2m" path="res://scenes/base_menu.tscn" id="4_422ur"]
 [ext_resource type="Script" uid="uid://efoqpct3gfap" path="res://scripts/story_act.gd" id="6_4v3x4"]
 
@@ -12,6 +13,11 @@ script = ExtResource("1_3tiwv")
 
 [node name="MainMenu" parent="." instance=ExtResource("4_422ur")]
 script = ExtResource("3_sqeji")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu"]
+position = Vector2(48.829334, 31.499975)
+scale = Vector2(1.6268291, 1.6268291)
+texture = ExtResource("4_8jdwr")
 
 [node name="New Game" type="Button" parent="MainMenu"]
 layout_mode = 2

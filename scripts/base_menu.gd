@@ -4,10 +4,17 @@ extends VBoxContainer
 
 signal menu_pressed(button_name: String)
 @export var menu_name : String = "defaultMenu"
+@export var menu_background : Sprite2D = Sprite2D.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	menu_name = get_name() as String
+
+func set_menu_background(bg_image_path: String):
+	menu_background.set_texture(load(bg_image_path) as Texture2D)
+	add_child(menu_background)
+	menu_background.set_position(Vector2.ZERO)
+
 
 func set_menu_name(m_name: String):
 	menu_name = m_name
