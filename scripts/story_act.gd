@@ -75,6 +75,7 @@ func set_decision(decision_data: Dictionary):
 	act_decision.hide()
 
 func play_act():
+	act_history = []
 	for x in range(act_dialogues.size()):
 		if x == 0:
 			act_dialogues[x].show()
@@ -106,3 +107,6 @@ func get_act_outcome() -> Array[String]:
 		return act_decision_outcome
 	else:
 		return []
+
+func get_act_history():
+	return act_history
