@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b52v2yfyihkq7"]
+
+[ext_resource type="Script" uid="uid://d03ea73m2vyhf" path="res://scripts/history.gd" id="1_3neif"]
+
+[node name="History" type="HBoxContainer"]
+custom_minimum_size = Vector2(900, 396)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -198.0
+offset_right = 450.0
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3neif")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(800, 296)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
