@@ -76,6 +76,7 @@ func setup_characters():
 func create_acts():
 	# creating act1
 	var act1 = StoryAct.new()
+	act1.set_act_background("res://media/placeholders/aesthetics-vaporwave-seapunk-light-wallpaper-preview-1827258361.jpg")
 	#act1.set_act_characters([]) doesnt have any
 	act1.set_dialogues([
 		"you are dreaming of a peaceful landscape, with no one around to break the peace"
@@ -91,6 +92,7 @@ func create_acts():
 	
 	# creating act2
 	var act2 = StoryAct.new()
+	act2.set_act_background("res://media/placeholders/vincent-van-gogh-starry-wallpaper-thumb-590413838.jpg")
 	#act2.set_act_characters([]) doesnt have any
 	act2.set_dialogues([
 		"you cannot waste a dream so peaceful",
@@ -103,6 +105,7 @@ func create_acts():
 	
 	# creating act3
 	var act3 = StoryAct.new()
+	act3.set_act_background("res://media/placeholders/artistic-vaporwave-aesthetic-japan-hd-wallpaper-thumb-3648627040.jpg")
 	act3.set_act_characters([all_characters.get(1)])
 	act3.set_dialogues([
 		"you wake up and stretch, then walk out onto the wall to greet the moon",
@@ -124,6 +127,7 @@ func create_acts():
 	
 	# creating act4
 	var act4 = StoryAct.new()
+	act4.set_act_background("res://media/placeholders/6-4196077247.jpg")
 	#act4.set_act_characters([]) 
 	act4.set_dialogues([
 		"waking up was a mistake, better correct it right away",
@@ -136,6 +140,7 @@ func create_acts():
 	
 	# creating act5
 	var act5 = StoryAct.new()
+	act5.set_act_background("res://media/placeholders/OIP-3276224567.jpg")
 	act5.set_act_characters(all_characters)
 	act5.set_dialogues([
 		{
@@ -162,6 +167,7 @@ func create_acts():
 	
 	# creating act
 	#var act = StoryAct.new()
+	#act.set_act_background()
 	#act.set_act_characters([])
 	#act.set_dialogues([])
 	#act.set_decision({})
