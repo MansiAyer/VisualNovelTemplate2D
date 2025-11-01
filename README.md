@@ -105,114 +105,114 @@ Returns nothing
 </details>
 <details>
   <summary><code> get_emotion_texture(emotion_name: String) -> Texture2D </code></summary>
-Returns the texture saved under the specified name
-Returns a blank texture if no texture has been saved under the specified name
-Accepts one `String`
-Returns `Texture2D`
+Returns the texture saved under the specified name  
+Returns a blank texture if no texture has been saved under the specified name  
+Accepts one `String`  
+Returns `Texture2D`  
 </details>
 
 __StoryAct__
 <details>
   <summary><code> set_act_characters(ch_array : Array[Character]) </code></summary>
-Sets the character objects to use in a StoryAct object
-StoryAct uses these character objects to assign images to dialogues
-Accepts one `Array[Character]` 
-Returns nothing
+Sets the character objects to use in a StoryAct object  
+StoryAct uses these character objects to assign images to dialogues  
+Accepts one `Array[Character]`   
+Returns nothing  
 </details>
 <details>
   <summary><code> set_dialogues(dg_data: Array) </code></summary>
-Creates dialogues in the specified sequence
-Accepts one `Array`
-Returns nothing
+Creates dialogues in the specified sequence  
+Accepts one `Array`  
+Returns nothing  
 </details>
 <details>
   <summary><code> set_decision(decision_data: Dictionary) </code></summary>
-Creates the decision for the StoryAct object
-Each StoryAct object has one decision object
-If decision is set, then the StoryAct ends after a choice is made, else it ends after the last dialogue in the sequence
-Accepts one `Dictionary`
-Returns nothing
+Creates the decision for the StoryAct object  
+Each StoryAct object has one decision object  
+If decision is set, then the StoryAct ends after a choice is made, else it ends after the last dialogue in the sequence  
+Accepts one `Dictionary`  
+Returns nothing  
 </details>
 <details>
   <summary><code> play_act() </code></summary>
-Starts the dialogues in the sequence set with `set_dialogues(dg_data: Array)`
-Accepts nothing
-Returns nothing
+Starts the dialogues in the sequence set with `set_dialogues(dg_data: Array)`  
+Accepts nothing  
+Returns nothing  
 </details>
 <details>
   <summary><code> get_act_outcome() -> Array[String] </code></summary>
-Returns the outcome of the StoryAct object's decision
-Accepts nothing
-Returns `Array[String]` - Array[0] is the decision name, Array[1] is the choice picked by player
+Returns the outcome of the StoryAct object's decision  
+Accepts nothing  
+Returns `Array[String]` - Array[0] is the decision name, Array[1] is the choice picked by player  
 </details>
 <details>
   <summary><code> get_act_history() -> Array[String] </code></summary>
-Returns the dialogues that have been completed by the player in that StoryAct object
-Retains sequence in which dialogues were completed
-Does not include the decision or its choice
-Accepts nothing
-Returns `Array[String]` - each string is a dialogue
+Returns the dialogues that have been completed by the player in that StoryAct object  
+Retains sequence in which dialogues were completed  
+Does not include the decision or its choice  
+Accepts nothing  
+Returns `Array[String]` - each string is a dialogue  
 </details>
 
 __Dialogue__
 <details>
   <summary><code> set_dialogue_data(text: String) </code></summary>
-Sets the text for the dialogue object
-Accepts one `String`
-Returns nothing
+Sets the text for the dialogue object  
+Accepts one `String`  
+Returns nothing  
 </details>
 <details>
   <summary><code> get_dialogue_data() -> String </code></summary>
-Returns the text that is displayed in that dialogue object
-Accepts nothing
-Returns `String`
+Returns the text that is displayed in that dialogue object  
+Accepts nothing  
+Returns `String`  
 </details>
 
 __BoxDialogue__
 <details>
   <summary><code> set_dialogue_data(text: String) </code></summary>
-Sets the text for the BoxDialogue object
-Accepts one `String`
-Returns nothing
+Sets the text for the BoxDialogue object  
+Accepts one `String`  
+Returns nothing  
 </details>
 <details>
   <summary><code> set_dialogue_speaker(img: Texture2D, sp_name: String) </code></summary>
-Sets the speaker of the dialogue for the BoxDialogue object
-Accepts one `Texture2D`, one `String` - texture is used to display the dialogue image, string is used to display the speaker name
-Returns nothing
+Sets the speaker of the dialogue for the BoxDialogue object  
+Accepts one `Texture2D`, one `String` - texture is used to display the dialogue image, string is used to display the speaker name  
+Returns nothing  
 </details>
 <details>
   <summary><code> get_dialogue_data() -> String </code></summary>
-Returns the speaker name and dialogue text that is displayed in that BoxDialogue object
-Accepts nothing
-Returns `String`
+Returns the speaker name and dialogue text that is displayed in that BoxDialogue object  
+Accepts nothing  
+Returns `String`  
 </details>
 
 
 __Decision__
 <details>
   <summary><code> set_decision_name(decn_name: String) </code></summary>
-Sets the name of the decision
-Accepts one `String`
-Returns nothing
+Sets the name of the decision  
+Accepts one `String`  
+Returns nothing  
 </details>
 <details>
   <summary><code> add_choice(option: String) </code></summary>
-Creates a button as one of the choices for that decision
-The passed text is displayed as the option
-Accepts one `String`
-Returns nothing
+Creates a button as one of the choices for that decision  
+The passed text is displayed as the option  
+Accepts one `String`  
+Returns nothing  
 </details>
 <details>
   <summary><code> remove_option(option_name: String) </code></summary>
-Removes the specified option from the list of options for that decision
-Accepts one `String`
-Returns nothing
+Removes the specified option from the list of options for that decision  
+Accepts one `String`  
+Returns nothing  
 </details>
 <details>
   <summary><code> list_options() -> Array[Node] </code></summary>
-Returns a list of options found in that decision
-Accepts nothing
-Returns `Array`
+Returns a list of options found in that decision  
+Accepts nothing  
+Returns `Array`  
 </details>
 
